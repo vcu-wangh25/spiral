@@ -11,9 +11,10 @@ def spiralize(number):
         if counter == 4:
             incrt += 2
             counter = 0
+            
     return total
 
-if _name_ =="_main_":
+if _name_ == "_main_":
     templ ="""
 def test_{0}():
     \"\"\" Test the {0} from the assignments. \"\"\"
