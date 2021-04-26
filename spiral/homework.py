@@ -1,8 +1,27 @@
-def spiralize(number):   
-    if n == 1:
-        return =1    
+def spiralize(number):
+    x = 1
+    counter = 0
+    incrt = 2
+    total = 0
 
-    return (4 * n*n - 6 * n + 6 +
-               spiralize(n-2))
-n = 501
-print(spiralize(n))
+    while x <= number ** 2:
+        total += x
+        x += incrt
+        counter += 1
+        if counter == 4:
+            incrt += 2
+            counter = 0
+    return total
+
+if _name_ =="_main_":
+    templ ="""
+def test_{0}():
+    \"\"\" Test the {0} from the assignments. \"\"\"
+    assert homework.spiralize({0}) == {1}
+"""
+
+    x = 11
+    while x <= 501:
+        answer = spiralize(x)
+        print(templ.format(x, answer))
+        x += 10
